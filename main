@@ -1,0 +1,144 @@
+/*
+ * date: 11/28/16
+ * Arrays
+ * 
+ */
+public class Classwork {
+
+	public static void main(String[] args) {
+		char[] vowels={'a','e','i','o','u'};
+		char[] cap_vowels;
+		int[] numbers={45,23,42,12,6,60,2};
+		int largest=0;
+		int x=50,y=20,z=55;
+		char[][]ttt={{'X','O','X'},
+					 {'X','O','X'},// brace inside braces because its
+					 {'O','X','X'}};// 2d so the computer knows its 2d.
+        printarray(ttt);
+		cap_vowels = cap(vowels);
+		printarray(cap_vowels);
+
+		largest=find_large(numbers);
+		System.out.println("largest number is : "+largest);
+		largest=find_largest( x,y,z,12);
+		System.out.println("largest number is : "+ largest);
+		sWinner(ttt,'O')
+			System.out.println("There winner is O player");
+		else if
+			System.out.println("The winner is X player");
+		else
+			System.out.println("It is a cat game");
+		}
+	}
+
+
+
+
+	public static boolean isWinner(char[][]v,char player)
+	{
+		if (player==v[0][0]&&(v[0][0]==v[0][1]&&v[0][1]==v[0][2])||
+		(player==v[1][0]&&v[1][0]==v[1][1]&&v[1][1]==v[1][2])||
+		(player==v[2][0]&&v[2][0]==v[2][1]&&v[2][1]==v[2][2])||
+		
+		(player==v[0][0]&&v[0][0]==v[1][0]&&v[1][0]==v[2][0])||
+		(player==v[0][1]&&v[0][1]==v[1][1]&&v[1][1]==v[2][1])||
+		(player==v[0][2]&&v[0][2]==v[1][2]&&v[1][2]==v[2][2])||
+		
+		(player==v[0][0]&&v[0][0]==v[1][1]&&v[1][1]==v[2][2])||
+		(player==v[0][2]&&v[0][2]==v[1][1]&&v[1][1]==v[2][0]))
+			return true;
+	
+			
+				return false;
+	}
+
+	public static char[]cap(char[] v)
+	{
+		char[] temp= new char[5];
+		int i=0;
+		for(char ltr:v)
+		{
+			temp[i]=(char)(ltr-32);// a-32=A
+			i++;
+
+		}
+		return temp;
+	}
+	public static void printarray (char[][] v)
+	{ for(char[] r:v)// for every row in v
+	{
+		
+		for (char element:r)// for every char letter within in row.
+		{
+			System.out.print(element+"\t");
+
+		}
+		System.out.println(" ");
+	}
+	}
+	public static void printarray (char[] v)
+	{
+		for (char ltr:v)// for every char letter within in v.
+		{
+			System.out.print(ltr+"\t");
+
+		}
+		System.out.println(" ");
+	}
+	public static int find_large(int[]a)
+	{
+		int large=a[0];
+		for( int i:a)
+		{
+			if(i>large)
+			{
+				large=i;
+			}
+
+		}
+
+		return large;
+
+	}
+	public static int find_largest(int... a)// for however many inputs you want put ...
+	{
+		int large=a[0];
+		for( int i:a)
+		{
+			if(i>large)
+			{
+				large=i;
+			}
+
+		}
+
+		return large;
+
+	}
+	
+	
+	
+	// two dimensional arrays
+	
+	//type[row][column]name=new type[3][4];
+	
+	int [][] suduko =new int [9][9];
+	double [][] grade=new double[36][3];
+	/*for(c=0;c,arr[0],length;c++) add a row
+	 * {
+	 * 	sum+=a[0][c];
+	 * }
+	 * for(r=0;r<arr.length;r++)  add a column
+	 * {
+	 * 	sum+=a[r][2];
+	 * }
+	 * for(i=0;i<arr.length;i++) add a diagonal going this way \
+	 * {
+	 * 	sum+=a[i][i];
+	 * }
+	 * for(i=0;i<arr.length;i++) add a diagonal going this way /
+	 * {
+	 * 	sum+=a[i][2-i]
+	 * }
+	 */
+}
